@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633CB8D31CDDC9C8007D091C /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB8D21CDDC9C8007D091C /* ViewControllerExtension.swift */; };
+		633CB8D51CDDCD90007D091C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB8D41CDDCD90007D091C /* GalleryViewController.swift */; };
 		63AB02261CDC965400957FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB02251CDC965400957FC6 /* AppDelegate.swift */; };
 		63AB02281CDC965400957FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB02271CDC965400957FC6 /* ViewController.swift */; };
 		63AB022B1CDC965400957FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AB02291CDC965400957FC6 /* Main.storyboard */; };
 		63AB022D1CDC965400957FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AB022C1CDC965400957FC6 /* Assets.xcassets */; };
 		63AB02301CDC965400957FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AB022E1CDC965400957FC6 /* LaunchScreen.storyboard */; };
+		63E0A97F1CE09F3600E2964B /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0A97E1CE09F3600E2964B /* KoreanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633CB8D21CDDC9C8007D091C /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		633CB8D41CDDCD90007D091C /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		63AB02221CDC965400957FC6 /* BeautyGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AB02251CDC965400957FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63AB02271CDC965400957FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		63AB022C1CDC965400957FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63AB022F1CDC965400957FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63AB02311CDC965400957FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E0A97E1CE09F3600E2964B /* KoreanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,12 @@
 				63AB02251CDC965400957FC6 /* AppDelegate.swift */,
 				63AB02271CDC965400957FC6 /* ViewController.swift */,
 				63AB02291CDC965400957FC6 /* Main.storyboard */,
+				63E0A97E1CE09F3600E2964B /* KoreanViewController.swift */,
 				63AB022C1CDC965400957FC6 /* Assets.xcassets */,
 				63AB022E1CDC965400957FC6 /* LaunchScreen.storyboard */,
 				63AB02311CDC965400957FC6 /* Info.plist */,
+				633CB8D21CDDC9C8007D091C /* ViewControllerExtension.swift */,
+				633CB8D41CDDCD90007D091C /* GalleryViewController.swift */,
 			);
 			path = BeautyGallery;
 			sourceTree = "<group>";
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					63AB02211CDC965400957FC6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FJQGME7J9X;
 					};
 				};
 			};
@@ -136,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AB02281CDC965400957FC6 /* ViewController.swift in Sources */,
+				63E0A97F1CE09F3600E2964B /* KoreanViewController.swift in Sources */,
+				633CB8D51CDDCD90007D091C /* GalleryViewController.swift in Sources */,
 				63AB02261CDC965400957FC6 /* AppDelegate.swift in Sources */,
+				633CB8D31CDDC9C8007D091C /* ViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +264,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeautyGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChadChan.BeautyGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeautyGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChadChan.BeautyGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +307,7 @@
 				63AB02361CDC965400957FC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
