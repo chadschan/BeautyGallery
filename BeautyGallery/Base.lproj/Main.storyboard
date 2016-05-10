@@ -1,46 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="qTo-LI-dQ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qTo-LI-dQ3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--BeautyGallery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isS-BS-zo6"/>
+                        <viewControllerLayoutGuide type="bottom" id="XgL-O2-fTz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one of the Beauty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKd-J6-nrh">
-                                <rect key="frame" x="20" y="150" width="188" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" id="EqO-sv-Fpp">
-                                <rect key="frame" x="0.0" y="275" width="768" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqO-sv-Fpp">
+                                <rect key="frame" x="140" y="191" width="320" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QEB-cO-dwJ">
-                                <rect key="frame" x="291" y="664" width="186" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <segue destination="orX-K7-8Py" kind="push" identifier="GotoGallery" id="STL-XE-48U"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeautyGallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uYF-lR-Lny">
-                                <rect key="frame" x="315" y="97" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeautyGallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-lR-Lny">
+                                <rect key="frame" x="238" y="98" width="125" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one of the Beauty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-J6-nrh">
+                                <rect key="frame" x="18" y="163" width="188" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-cO-dwJ">
+                                <rect key="frame" x="238" y="487" width="125" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Djj-Up-9hd"/>
+                                </constraints>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="orX-K7-8Py" kind="show" identifier="GotoGallery" id="STL-XE-48U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QEB-cO-dwJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9a0-UO-9fa"/>
+                            <constraint firstItem="uYF-lR-Lny" firstAttribute="top" secondItem="isS-BS-zo6" secondAttribute="bottom" constant="34" id="BPg-0x-Qej"/>
+                            <constraint firstItem="QEB-cO-dwJ" firstAttribute="top" secondItem="EqO-sv-Fpp" secondAttribute="bottom" constant="80" id="FxW-1W-Gqn"/>
+                            <constraint firstItem="kKd-J6-nrh" firstAttribute="top" secondItem="uYF-lR-Lny" secondAttribute="bottom" constant="41" id="J5c-W3-WGb"/>
+                            <constraint firstItem="QEB-cO-dwJ" firstAttribute="trailing" secondItem="uYF-lR-Lny" secondAttribute="trailing" id="Ww0-Qw-Aha"/>
+                            <constraint firstItem="kKd-J6-nrh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="gK9-bN-FkF"/>
+                            <constraint firstItem="EqO-sv-Fpp" firstAttribute="top" secondItem="kKd-J6-nrh" secondAttribute="bottom" constant="8" symbolic="YES" id="hdR-rC-VHO"/>
+                            <constraint firstItem="QEB-cO-dwJ" firstAttribute="leading" secondItem="uYF-lR-Lny" secondAttribute="leading" id="ogA-hA-gIL"/>
+                            <constraint firstItem="QEB-cO-dwJ" firstAttribute="centerX" secondItem="EqO-sv-Fpp" secondAttribute="centerX" id="yEo-qc-6j2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BeautyGallery" id="vgR-Y6-ycR"/>
                     <connections>
@@ -49,35 +64,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="579"/>
+            <point key="canvasLocation" x="1753" y="339"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="rpx-Ly-HB0">
             <objects>
                 <viewController id="orX-K7-8Py" customClass="GalleryViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lmx-Td-Puo"/>
+                        <viewControllerLayoutGuide type="bottom" id="kCJ-Sa-vuv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zwJ-ZS-3Zf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CJr-jc-di8">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJr-jc-di8">
                                 <rect key="frame" x="20" y="20" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="Sa4-t3-sja" kind="unwind" unwindAction="close:" id="P03-tW-Yk3"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="libingbing" id="k4x-vf-iZg">
-                                <rect key="frame" x="224" y="228" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="fanbingbing" translatesAutoresizingMaskIntoConstraints="NO" id="k4x-vf-iZg">
+                                <rect key="frame" x="-20" y="68" width="640" height="464"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="640" id="aif-MC-4kX"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k4x-vf-iZg" firstAttribute="centerX" secondItem="zwJ-ZS-3Zf" secondAttribute="centerX" id="53V-ww-3cl"/>
+                            <constraint firstItem="k4x-vf-iZg" firstAttribute="top" secondItem="Lmx-Td-Puo" secondAttribute="bottom" constant="4" id="Lcl-gQ-03M"/>
+                            <constraint firstItem="k4x-vf-iZg" firstAttribute="centerY" secondItem="zwJ-ZS-3Zf" secondAttribute="centerY" id="jja-G2-3XL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yv6-YE-OUt">
                         <barButtonItem key="rightBarButtonItem" id="ha4-Rt-ntz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Be0-Ab-ngy">
-                                <rect key="frame" x="578" y="7" width="170" height="30"/>
+                                <rect key="frame" x="410" y="7" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -93,7 +118,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE1-tS-hwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sa4-t3-sja" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="579"/>
+            <point key="canvasLocation" x="2423" y="339"/>
         </scene>
         <!--China-->
         <scene sceneID="5Xx-C5-uSJ">
@@ -112,7 +137,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epx-gI-3rY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="579"/>
+            <point key="canvasLocation" x="987.5" y="339.2578125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TgK-Gm-80h">
@@ -131,67 +156,102 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-tB-flp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="1499"/>
+            <point key="canvasLocation" x="153.125" y="878.3203125"/>
         </scene>
         <!--Japan-->
         <scene sceneID="IZp-5Y-XLs">
             <objects>
                 <viewController id="jR7-zf-vTG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MJk-BO-HQv"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0Q-BC-7Dy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fTm-66-rOX">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="japanese" id="L7A-WF-sal">
-                                <rect key="frame" x="224" y="228" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="japanese" translatesAutoresizingMaskIntoConstraints="NO" id="L7A-WF-sal">
+                                <rect key="frame" x="-20" y="50" width="640" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="640" id="d0J-Ue-UVa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="640" id="lzb-Rn-QLe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lzb-Rn-QLe"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7A-WF-sal" firstAttribute="centerY" secondItem="fTm-66-rOX" secondAttribute="centerY" id="YZt-eG-a4M"/>
+                            <constraint firstItem="L7A-WF-sal" firstAttribute="centerX" secondItem="fTm-66-rOX" secondAttribute="centerX" id="hbL-bK-mxl"/>
+                            <constraint firstItem="L7A-WF-sal" firstAttribute="top" secondItem="MJk-BO-HQv" secondAttribute="bottom" constant="30" id="k9T-pr-Dgc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Japan" image="geisha" id="lXX-MC-n2t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7D-zn-ois" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="1733"/>
+            <point key="canvasLocation" x="987" y="1015"/>
         </scene>
         <!--Korea-->
         <scene sceneID="ihl-OC-QNH">
             <objects>
                 <viewController id="yse-ns-BiN" customClass="KoreanViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a05-Jn-MU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="o8k-9f-GWo"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BMq-qg-nQQ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Re-kT-ezz">
-                                <rect key="frame" x="111" y="856" width="54" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="facebook"/>
-                                <connections>
-                                    <action selector="facebookTapped:" destination="yse-ns-BiN" eventType="touchUpInside" id="hoS-N8-ck6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bJ2-ad-I9J">
-                                <rect key="frame" x="359" y="856" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-ad-I9J">
+                                <rect key="frame" x="275" y="487" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="22a-FO-6j1"/>
+                                    <constraint firstAttribute="width" constant="50" id="hTr-ny-8fh"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="weibo"/>
                                 <connections>
                                     <action selector="sinaweiboTapped:" destination="yse-ns-BiN" eventType="touchUpInside" id="qkZ-6J-pF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7J4-0e-EI5">
-                                <rect key="frame" x="596" y="856" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7J4-0e-EI5">
+                                <rect key="frame" x="395" y="487" width="50" height="50"/>
                                 <state key="normal" backgroundImage="twitter"/>
                                 <connections>
                                     <action selector="twtterTapped:" destination="yse-ns-BiN" eventType="touchUpInside" id="Mb3-Fh-XHX"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="korean" id="pib-fb-1hF">
-                                <rect key="frame" x="224" y="228" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="korean" translatesAutoresizingMaskIntoConstraints="NO" id="pib-fb-1hF">
+                                <rect key="frame" x="140" y="20" width="320" height="437"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-kT-ezz">
+                                <rect key="frame" x="151" y="487" width="54" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="Der-JA-ePZ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="facebook"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="yse-ns-BiN" eventType="touchUpInside" id="hoS-N8-ck6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJ2-ad-I9J" firstAttribute="centerX" secondItem="pib-fb-1hF" secondAttribute="centerX" id="A2r-X4-H6u"/>
+                            <constraint firstItem="bJ2-ad-I9J" firstAttribute="centerX" secondItem="BMq-qg-nQQ" secondAttribute="centerX" id="Bmx-Is-KVh"/>
+                            <constraint firstItem="7J4-0e-EI5" firstAttribute="top" secondItem="bJ2-ad-I9J" secondAttribute="top" id="DW2-oq-acN"/>
+                            <constraint firstItem="pib-fb-1hF" firstAttribute="top" secondItem="a05-Jn-MU6" secondAttribute="bottom" id="DhV-jD-JaI"/>
+                            <constraint firstItem="7J4-0e-EI5" firstAttribute="top" secondItem="2Re-kT-ezz" secondAttribute="top" id="NHc-9b-TYi"/>
+                            <constraint firstItem="bJ2-ad-I9J" firstAttribute="top" secondItem="pib-fb-1hF" secondAttribute="bottom" constant="30" id="Nym-LU-vpI"/>
+                            <constraint firstItem="o8k-9f-GWo" firstAttribute="top" secondItem="bJ2-ad-I9J" secondAttribute="bottom" constant="14" id="Ra4-dR-YOv"/>
+                            <constraint firstItem="bJ2-ad-I9J" firstAttribute="leading" secondItem="2Re-kT-ezz" secondAttribute="trailing" constant="70" id="bbP-WM-F3f"/>
+                            <constraint firstItem="7J4-0e-EI5" firstAttribute="leading" secondItem="bJ2-ad-I9J" secondAttribute="trailing" constant="70" id="ri2-Vg-KqX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Korea" image="torii" id="bIs-jn-AyY"/>
                     <connections>
@@ -200,16 +260,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBx-zI-xS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="2885"/>
+            <point key="canvasLocation" x="987" y="1690"/>
         </scene>
     </scenes>
     <resources>
         <image name="facebook" width="50" height="50"/>
+        <image name="fanbingbing" width="320" height="568"/>
         <image name="geisha" width="25" height="25"/>
         <image name="great_wall" width="25" height="25"/>
         <image name="japanese" width="320" height="568"/>
         <image name="korean" width="320" height="568"/>
-        <image name="libingbing" width="320" height="568"/>
         <image name="torii" width="25" height="25"/>
         <image name="twitter" width="50" height="50"/>
         <image name="weibo" width="50" height="50"/>

@@ -19,11 +19,11 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let imagesName = imageName {
-            self.beautyImage.image = UIImage(named: imagesName)
-            navigationItem.title = imagesName
+       // if let imagesName = imageName {
+            self.beautyImage.image = UIImage(named: imageName!)
+            navigationItem.title = imageName!
             
-        }
+       // }
 
     }
     
